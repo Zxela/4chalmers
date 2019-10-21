@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+'use-strict'
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+module.exports = function (app) {
+  // Register Routes
+  
+  // Home Page
+  get('/', function(req, res, next) {
+    res.render('index', { title: 'Sample API Server' });
+  })
 
-module.exports = router;
+  // API Routes
+  
+  app.route('/api')
+    .get(() => {console.log("hello")})
+}
