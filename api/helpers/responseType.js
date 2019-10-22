@@ -1,9 +1,19 @@
 'use-strict'
 
-export default mealResponse = function () {
-
+exports.mealResponse = function (res, status, message, data) {
+    var response = {
+        statusCode: status,
+        message: message,
+        data: data,
+    }
+    res.status(200).send(response)
 }
 
-export default clothingResponse = function () {
-
+exports.clothingResponse = function (res, status, message, data) {
+    var response = {
+        statusCode: status,
+        message: message,
+        data: data,
+    }
+    res.status(200).send(response)
 }

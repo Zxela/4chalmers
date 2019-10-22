@@ -4,18 +4,26 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var routes = require('./api/routes')
+var routes = require('./api/routes/index.js')
 
 var app = express();
 
-// Express Middleware
+// var mongoose = require('mongoose');
+// Import models
+TorontoMeals = require('./api/models/torontoMealModel')
+
+// Mongoose instance url connection
+// mongoose.Promise = global.Promise;
+// mongoose.connect('mongodb://localhost/exampledb');
+
+// Express middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Register Routes
+// Register routes
 routes(app)
 
 module.exports = app;

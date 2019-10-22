@@ -1,19 +1,19 @@
 'use-strict'
 
 module.exports = function (app) {
-  var Toronto = require('../controllers/torontoController');
-  var Barrie = require('../contollers/barrieController')
+  var toronto = require('../controllers/torontoController');
+  var barrie = require('../controllers/barrieController')
 
-// /meals
-  app.route('/api/meals/toronto')
-    .get(Toronto.getMeals)
+  // /meals
+  // app.route('/api/meals/toronto')
+  //   .get(toronto.getMeals)
   app.route('/api/meals/barrie')
-    .get(Barrie.getMeals)
+    .get(barrie.getMeals)
 
-// /clothing
+  // /clothing
   app.route('/api/clothing/toronto')
-    .get(Toronto.getClothing)
+    .get(toronto.getClothing)
   app.route('/api/clothing/barrie')
-    .get(Barrie.getClothing)
+    .get(barrie.getClothing)
 
 }
