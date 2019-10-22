@@ -4,19 +4,16 @@ module.exports = function (app) {
   var Toronto = require('../controllers/torontoController');
   var Barrie = require('../contollers/barrieController')
 
-  // Home Page
-  app.route('/')
-    .get(function (req, res, next) {
-      res.render('index', {});
-    })
+// /meals
+  app.route('/api/meals/toronto')
+    .get(Toronto.getMeals)
+  app.route('/api/meals/barrie')
+    .get(Barrie.getMeals)
 
-  app.route('/api/Toronto/clothing')
+// /clothing
+  app.route('/api/clothing/toronto')
     .get(Toronto.getClothing)
-  app.route('/api/Toronto/meal')
-    .get(Toronto.getMeal)
-  app.route('/api/Barrie/clothing')
+  app.route('/api/clothing/barrie')
     .get(Barrie.getClothing)
-  app.route('/api/Barrie/meal')
-    .get(Barrie.getMeal)
 
 }
