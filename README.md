@@ -10,7 +10,7 @@ The endpoints include:
 - (GET) /barrie/meals (returns MOCK API call)
 - (GET) /barrie/clothing (return csv file)
 
-I have also included example endpoints for the remainder of the CRUD operations
+I have also included example endpoints for the remainder of the CRUD operations  
 The responses from these endpoints have not been sanitized. 
 - (POST) /toronto/meals (create new meal)
 - (GET) /toronto/meal/:mealId (return specific meal record)
