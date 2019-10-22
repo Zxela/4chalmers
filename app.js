@@ -10,11 +10,11 @@ var app = express();
 
 var mongoose = require('mongoose');
 // Import models
-TorontoMeals = require('./api/models/torontoMealModel')
+var TorontoMeals = require('./api/models/torontoMealModel')
 
 // Mongoose instance url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/exampledb');
+mongoose.connect('mongodb://mongo:27017/exampledb');
 
 // Express middleware
 app.use(logger('dev'));

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const TorontoMealSchema = new Schema({
-    name: {
+    service_name: {
         type: String,
         required: 'Kindly enter the name'
     },
