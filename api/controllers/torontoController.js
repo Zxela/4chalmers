@@ -53,7 +53,7 @@ exports.updateMeal = function (req, res) {
 
 exports.deleteMeal = function (req, res) {
     TorontoMeal.remove({
-        _id: req.params.taskId
+        _id: req.params.mealId
     }, function (err, meal) {
         if (err)
             res.send(err);
