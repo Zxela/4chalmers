@@ -5,17 +5,11 @@ const Schema = mongoose.Schema;
 const TorontoMealSchema = new Schema({
     name: {
         type: String,
+        required: 'Kindly enter the name'
     },
-    Created_date: {
-        type: Date,
-        default: Date.now
-    },
-    status: {
-        type: [{
-            type: String,
-            enum:['ongoing','completed']
-        }],
-        default: ['ongoing']
+    available: {
+        type: Boolean,
+        default: true
     }
 })
 

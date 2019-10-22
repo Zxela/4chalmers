@@ -15,10 +15,11 @@ module.exports = function (app) {
     .get(toronto.getClothing)
   app.route('/toronto/meals')
     .get(toronto.getMeals) // example fetch from DB 
+
   // example CRUD operations
-  // .post(toronto.newMeal)
-  // app.route('/toronto/meals/:mealId)
-  // .get(toronto.getMeal)
-  // .put(toronto.updateMeal)
-  // .delete(toronto.deleteMeal)
+    .post(toronto.createMeal)
+  app.route('/toronto/meals/:mealId')
+    .get(toronto.getMeal)
+    .put(toronto.updateMeal)
+    .delete(toronto.deleteMeal)
 }
