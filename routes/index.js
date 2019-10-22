@@ -1,7 +1,10 @@
 'use-strict'
 
+/** 
+ * Register Routes 
+ */
 module.exports = function (app) {
-  // Register Routes
+
 
   // Home Page
   app.route('/')
@@ -9,15 +12,14 @@ module.exports = function (app) {
       res.render('index', {});
     })
 
-  /**
+  /** 
    * API Routes
    */
-  
   app.route('/api')
     .get(() => {
       console.log("hello")
     })
-  
+
   // CSV Example
   app.route('/api/Toronto')
   // JSON Example
