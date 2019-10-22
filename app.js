@@ -1,5 +1,6 @@
 'use-strict';
 
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -14,7 +15,8 @@ var TorontoMeals = require('./api/models/torontoMealModel')
 
 // Mongoose instance url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://mongo:27017/exampledb');
+mongoose.connect(process.env.DB_URL);
+
 
 // Express middleware
 app.use(logger('dev'));
