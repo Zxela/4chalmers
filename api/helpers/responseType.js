@@ -1,18 +1,18 @@
 'use-strict'
 
-exports.mealResponse = function (res, status, message, data) {
+exports.mealResponse = function (res, status, data) {
     var response = {
         statusCode: status,
-        message: message,
+        message: "Here are the available meals",
         data: data,
     }
     res.status(200).send(response)
 }
 
-exports.clothingResponse = function (res, status, message, data) {
+exports.clothingResponse = function (res, status, data) {
     var response = {
         statusCode: status,
-        message: message,
+        message: "Here are spaces offering free clothing",
         data: data,
     }
     res.status(200).send(response)
