@@ -1,7 +1,6 @@
 'use-strict'
-var responses = require('../helpers/responseType')
-var fs = require('fs')
 
+var responses = require('../helpers/responseType')
 
 exports.getMeals = function (req, res) {
     // mock api example 
@@ -35,7 +34,13 @@ exports.getMeals = function (req, res) {
 }
 exports.getClothing = function (req, res) {
     // csv example
+    const csvFilePath = 'api/resources/Canada/Ontario/Barrie/clothing.csv'
+    const csv = require('csvtojson')
 
-    responses.clothingResponse(res, 200, "data")
+    async function parseCsv() {
+        const data = await csv().fromFile(csvFilePath);
+        responses.clothingResponse(res, 200, data)
+    }
+    parseCsv()
 
 }

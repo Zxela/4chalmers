@@ -7,8 +7,7 @@ var responses = require('../helpers/responseType')
 exports.getClothing = function (req, res) {
     // JSON Example
     var clothing = require('../resources/Canada/Ontario/Toronto/clothing.json')
-    
-    responses.clothingResponse(res, 200,  "data")
+    responses.clothingResponse(res, 200, clothing)
 }
 
 exports.getMeals = function (req, res) {
@@ -21,7 +20,7 @@ exports.getMeals = function (req, res) {
     })
 }
 
-// EXAMPLE CRUD OPERATIONS
+// EXAMPLE CRUD OPERATIONS (Beyond fetch all records)
 exports.createMeal = function (req, res) {
     var newMeal = new TorontoMeal(req.body);
     newMeal.save(function (err, meal) {
