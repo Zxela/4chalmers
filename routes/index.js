@@ -1,10 +1,8 @@
 'use-strict'
 
-/** 
- * Register Routes 
- */
 module.exports = function (app) {
-
+  var Toronto = require('../controllers/torontoController');
+  var Barrie = require('../contollers/barrieController')
 
   // Home Page
   app.route('/')
@@ -12,21 +10,13 @@ module.exports = function (app) {
       res.render('index', {});
     })
 
-  /** 
-   * API Routes
-   */
-  app.route('/api')
-    .get(() => {
-      console.log("hello")
-    })
-
-  // CSV Example
-  app.route('/api/Toronto')
-  // JSON Example
-  app.route('/api/Barrie')
-  // Mock API Example
-  app.route('/api/London')
-  // SQL Example
-  app.route('/api/Mississauga')
+  app.route('/api/Toronto/clothing')
+    .get(Toronto.getClothing)
+  app.route('/api/Toronto/meal')
+    .get(Toronto.getMeal)
+  app.route('/api/Barrie/clothing')
+    .get(Barrie.getClothing)
+  app.route('/api/Barrie/meal')
+    .get(Barrie.getMeal)
 
 }
