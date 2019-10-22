@@ -17,7 +17,6 @@ var TorontoMeals = require('./api/models/torontoMealModel')
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DB_URL);
 
-
 // Express middleware
 app.use(logger('dev'));
 app.use(express.json());
