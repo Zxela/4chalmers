@@ -8,13 +8,13 @@ var routes = require('./api/routes/index.js')
 
 var app = express();
 
-// var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 // Import models
 TorontoMeals = require('./api/models/torontoMealModel')
 
 // Mongoose instance url connection
-// mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost/exampledb');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/exampledb');
 
 // Express middleware
 app.use(logger('dev'));

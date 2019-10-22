@@ -17,7 +17,7 @@ exports.getMeals = function (req, res) {
         if (err) {
             res.send(err)
         }
-        responses.mealResponse(res, 200, "Here are the available meals", meals)
+        responses.mealResponse(res, 200, meals)
     })
 }
 

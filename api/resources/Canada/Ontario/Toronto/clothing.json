@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "service_name": "Home Ing",
+        "available": true
+    },
+    {
+        "id": 2,
+        "service_name": "Bitwolf",
+        "available": true
+    },
+    {
+        "id": 3,
+        "service_name": "Otcom",
+        "available": true
+    },
+    {
+        "id": 4,
+        "service_name": "Wrapsafe",
+        "available": false
+    },
+    {
+        "id": 5,
+        "service_name": "Opela",
+        "available": false
+    },
+    {
+        "id": 6,
+        "service_name": "Voyatouch",
+        "available": true
+    },
+    {
+        "id": 7,
+        "service_name": "Otcom",
+        "available": false
+    },
+    {
+        "id": 8,
+        "service_name": "Zaam-Dox",
+        "available": false
+    },
+    {
+        "id": 9,
+        "service_name": "Cardify",
+        "available": true
+    },
+    {
+        "id": 10,
+        "service_name": "Bitwolf",
+        "available": false
+    }
+]
